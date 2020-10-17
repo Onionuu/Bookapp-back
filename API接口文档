@@ -1,1 +1,31 @@
+（1）处理发布请求的servlet
+方法：post  
+参数：{
+“publisherid":"",
+  "content":""
+  }
+  response类型：app/json
+  返回内容{
+  “status”："success"/"fail"
+  }
+  
+  
+  (2)处理注册的请求的servlet
+  方法：post
+  参数：{
+  "userid":"",
+  "psw":""
+  }
+  返回内容{
+  "status":"success"/"fail",
+  "errormessage" : ""
+  }
+  
+  (3)处理查询的请求的servlet
+  方法：get
+  参数：{
+  “index”：""
+  }
+  返回内容{
+  
 
