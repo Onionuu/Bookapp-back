@@ -24,8 +24,12 @@
   (3)处理查询的请求的servlet
   方法：get
   参数：{
-  “index”：""
+  “words”：""
   }
   返回内容{
+   "primaryImage":"",
+   "title":"",
+   "price":""
+   }
   
 
