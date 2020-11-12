@@ -24,7 +24,7 @@ public class HandlePublish extends HttpServlet {
         int goodsid=Integer.parseInt(req.getParameter("goodsid"));
         int publisherid=Integer.parseInt(req.getParameter("publisherid"));
         double price=Double.parseDouble(req.getParameter("price"));
-        Goods goods=new Goods(goodsid,publisherid,"",price);
+        Goods goods=new Goods();
         GoodsDAOImpl impl=new GoodsDAOImpl(DBUtils.getConnection());
         resp.setContentType("application/json");
         PrintWriter writer=resp.getWriter();

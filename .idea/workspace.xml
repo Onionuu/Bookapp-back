@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5a78dd1b-5936-461d-9af5-90c3528f1c74" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Bookapp-back.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/onion/bookapp/DB/DBFactory.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1kBBjD3BFcyQkCAbWehVoO7O1FO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.145977" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a78dd1b-5936-461d-9af5-90c3528f1c74" name="Default Changelist" comment="" />
+      <created>1605164236020</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605164236020</updated>
+      <workItem from="1605164237541" duration="1266000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="642" y="266" width="498" height="525" key="FileChooserDialogImpl" timestamp="1605165471143">
+      <screen x="0" y="27" width="1920" height="972" />
+    </state>
+    <state x="642" y="266" width="498" height="525" key="FileChooserDialogImpl/0.27.1920.972@0.27.1920.972" timestamp="1605165471143" />
+    <state x="746" y="140" width="418" height="752" key="RollbackChangesDialog" timestamp="1605165453423">
+      <screen x="0" y="27" width="1920" height="972" />
+    </state>
+    <state x="746" y="140" width="418" height="752" key="RollbackChangesDialog/0.27.1920.972@0.27.1920.972" timestamp="1605165453423" />
+    <state x="384" y="99" width="1024" height="852" key="SettingsEditor" timestamp="1605165472205">
+      <screen x="0" y="27" width="1920" height="972" />
+    </state>
+    <state x="384" y="99" width="1024" height="852" key="SettingsEditor/0.27.1920.972@0.27.1920.972" timestamp="1605165472205" />
+    <state x="727" y="290" width="455" height="452" key="chooseDestDirectoryDialog" timestamp="1605165309515">
+      <screen x="0" y="27" width="1920" height="972" />
+    </state>
+    <state x="727" y="290" width="455" height="452" key="chooseDestDirectoryDialog/0.27.1920.972@0.27.1920.972" timestamp="1605165309515" />
+  </component>
+</project>
