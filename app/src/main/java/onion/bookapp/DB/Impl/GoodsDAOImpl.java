@@ -11,7 +11,7 @@ public class GoodsDAOImpl implements GoodsDAO {
     private Connection conn=null;
     private PreparedStatement pstmt=null;
     public GoodsDAOImpl(Connection conn){this.conn=conn;}
-    public boolean insert(Goods goods) {
+    public boolean insert(Goods goods) throws Exception {
         boolean flag=false;
         String sql="Insert into goods(goodsid,publisherid,images,publishTime,price,title,detail,sort)Values(?,?,?,?,?,?,?,?)";
         try {
@@ -30,6 +30,7 @@ public class GoodsDAOImpl implements GoodsDAO {
             this.pstmt.close();
         }catch (SQLException e){
             e.printStackTrace();
+            throw new Exception();
         }
         return flag;
     }

@@ -1,8 +1,12 @@
 package onion.bookapp.DB;
 
+import org.omg.PortableInterceptor.USER_EXCEPTION;
+
+import java.io.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 /**
  * mysql的连接获取和释放
@@ -10,16 +14,28 @@ import java.sql.SQLException;
  */
 public class DBUtils {
     //数据库的URL
-    private static String BaseURL = "jdbc:mysql://localhost:3306/app?";
+    private static String BaseURL ;
     //名称
-    private static String UserName = "root";
+    private static String UserName ;
     //密码
-    private static String Password = "wuwu1212";
+    private static String Password ;
     //连接
     private static Connection connection = null;
 
     static {
+        Properties properties=new Properties();
+
         try {
+//            InputStream ips=new FileInputStream(DBUtils.class.getResource("/").getPath() + "/app.properties");
+//            properties.load(ips);
+//            BufferedReader bufferedReader=new BufferedReader(new FileReader("src/main/java/onion/bookapp/DB/app.properties"));
+//            properties.load(bufferedReader);
+//            BaseURL=properties.getProperty("url");
+//            UserName=properties.getProperty("name");
+//            Password=properties.getProperty("password");
+            BaseURL="jdbc:mysql://localhost/app?";
+            UserName="root";
+            Password="wuwu1212";
             try {
                 Class.forName("com.mysql.jdbc.Driver").newInstance();
             } catch (InstantiationException e) {

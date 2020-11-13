@@ -4,5 +4,5 @@ import onion.bookapp.mybean.data.Goods;
 
 public interface GoodsDAO {
     //插入商品
-    public  boolean insert(Goods goods);
+    public  boolean insert(Goods goods) throws Exception;
 }

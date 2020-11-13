@@ -14,7 +14,7 @@ public class GoodsDAOProxy implements GoodsDAO {
         dbUtils=new DBUtils();
         dao=new GoodsDAOImpl(dbUtils.getConnection());
     }
-    public boolean insert(Goods goods) {
+    public boolean insert(Goods goods) throws Exception {
         boolean flag=false;
         if(dao.insert(goods)){
             DBUtils.closeConnection();

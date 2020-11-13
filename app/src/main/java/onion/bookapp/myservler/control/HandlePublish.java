@@ -1,8 +1,12 @@
 package onion.bookapp.myservler.control;
 
+import com.google.gson.internal.$Gson$Preconditions;
+import onion.bookapp.DB.DAO.GoodsDAO;
 import onion.bookapp.DB.DBUtils;
 import onion.bookapp.DB.Impl.GoodsDAOImpl;
+import onion.bookapp.DB.Impl.GoodsDAOProxy;
 import onion.bookapp.mybean.data.Goods;
+import org.apache.commons.lang.StringUtils;
 import org.apache.tomcat.util.http.fileupload.FileItem;
 import org.apache.tomcat.util.http.fileupload.FileUploadException;
 import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
@@ -18,8 +22,10 @@ import java.io.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Vector;
 
 public class HandlePublish extends HttpServlet {
+    final String imagePath="/home/wu/appimages/";
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
@@ -42,38 +48,41 @@ public class HandlePublish extends HttpServlet {
 //        }
 //        writer.write(map.toString());
         request.setCharacterEncoding("utf-8");
-        response.setContentType("text/html");
+        response.setContentType("application/json");
+        response.setCharacterEncoding("utf-8");
         PrintWriter out=response.getWriter();
         // 创建文件项目工厂对象
         DiskFileItemFactory factory = new DiskFileItemFactory();
-
         // 设置文件上传路径
         //String upload = "f:";
         // 获取系统默认的临时文件保存路径，该路径为Tomcat根目录下的temp文件夹
         //String temp = System.getProperty("java.io.tmpdir");
         // 设置缓冲区大小为 5M
         factory.setSizeThreshold(1024 * 1024 * 5);
-        // 设置临时文件夹为temp
-        factory.setRepository(new File("/home/wu/图片"));
+        // 设置临时文件夹
+        factory.setRepository(new File(imagePath));
         // 用工厂实例化上传组件,ServletFileUpload 用来解析文件上传请求
         ServletFileUpload servletFileUpload = new ServletFileUpload(factory);
-
         servletFileUpload.setHeaderEncoding("UTF-8");
         // 解析结果放在List中
+
+        Map<String,String> responsemap=new HashMap<String, String>();
+        Map<String,String> map = new HashMap<String, String>() ;//存储字段参数
+        List<String> Image_Local_Path=new Vector<String>();//存储图片在服务器上的存储路径
         try {
             List<FileItem> list = servletFileUpload.parseRequest(new ServletRequestContext(request));
-
             for (FileItem item : list) {
                 String name = item.getFieldName();
                 InputStream is = item.getInputStream();
-
                 System.out.println("the current name is " + name);
 
                 if (name.contains("photo") ||name.contains("file")) {
                     try {
-                        inputStream2File(is,
-                                "/home/wu/图片/" + System.currentTimeMillis()
-                                        + item.getName());
+                        //用时间戳加图片名作为图片的文件名
+                        String savePath=imagePath + System.currentTimeMillis()
+                                +item.getName();
+                        inputStream2File(is,savePath);
+                        Image_Local_Path.add(savePath);
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -82,13 +91,26 @@ public class HandlePublish extends HttpServlet {
                     String value = item.getString("UTF-8");
                     System.out.println(value );
                     System.out.println(key + "---" + value);
+                    map.put(name,value);
                 }
             }
-
-            out.write("success");
-        } catch (FileUploadException e) {
+            String publisherid=map.get("publisherid");
+            String goodsid=map.get("goodsid");
+            String publishTime=Long.toString(System.currentTimeMillis());
+            String price=map.get("prices");
+            String title=map.get("title");
+            String detail=map.get("detail");
+            String sort=map.get("sort");
+            String images= StringUtils.join(Image_Local_Path,';');
+            Goods goods=new Goods(goodsid, publisherid, images, publishTime, title, detail, sort, price);
+            GoodsDAO dao=new GoodsDAOProxy();
+            dao.insert(goods);
+            responsemap.put("status","success");
+            out.write(responsemap.toString());
+        }  catch (Exception e) {
             e.printStackTrace();
-            out.write("failure");
+            responsemap.put("status","failure");
+            out.write(responsemap.toString());
         }
 
         out.flush();
