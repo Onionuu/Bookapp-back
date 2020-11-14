@@ -1,8 +1,7 @@
-（1）处理发布请求的servlet//wjp（已完成）
+（1）处理发布请求的servlet//wjp已完成
 方法：post  
 参数：{
-“publisherid":"",
-  。。。
+、、、、、
   }
   response类型：app/json
   返回内容{
@@ -10,21 +9,22 @@
   }
   
   
-  (2)处理注册的请求的servlet//wjp在写
+  (2)处理注册的请求的servlet//wjp已完成
   方法：post
   参数：{
-  "userid":"",
-  "psw":""，
-  "city":"",
-   "school":"",
-   "major":""
+  "logname":"",
+  "password":"",
+  again_password:"",
+  city:"",
+  major:"",
+  school:""
   }
   返回内容{
   "status":"success"/"fail",
   "errormessage" : ""
   }
   
-  (3)处理查询的请求的servlet//chx（已完成）
+  (3)处理查询的请求的servlet//chx已完成
   方法：get
   参数：{
   “words”：""
