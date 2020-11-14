@@ -20,13 +20,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a78dd1b-5936-461d-9af5-90c3528f1c74" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Bookapp-back.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/onion/bookapp/DB/DBFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/artifacts/app_war_exploded/WEB-INF/classes/onion/bookapp/myservlet/control/HandlePublish.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/out/artifacts/app_war_exploded/WEB-INF/classes/onion/bookapp/myservlet/control/HandleSearch.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/onion/bookapp/mybean/data/Register.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/onion/bookapp/myservlet/control/HandleRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/target/classes/onion/bookapp/myservlet/control/HandlePublish.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/target/classes/onion/bookapp/myservlet/control/HandleSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API接口文档" beforeDir="false" afterPath="$PROJECT_DIR$/API接口文档" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/out/artifacts/app_war_exploded/WEB-INF/classes/onion/bookapp/DB/DAO/GoodsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/artifacts/app_war_exploded/WEB-INF/classes/onion/bookapp/DB/DAO/GoodsDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/out/artifacts/app_war_exploded/WEB-INF/classes/onion/bookapp/DB/Impl/GoodsDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/artifacts/app_war_exploded/WEB-INF/classes/onion/bookapp/DB/Impl/GoodsDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/out/artifacts/app_war_exploded/WEB-INF/classes/onion/bookapp/myservler/control/HandlePublish.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/out/artifacts/app_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/out/artifacts/app_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/onion/bookapp/DB/DAO/GoodsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/onion/bookapp/DB/DAO/GoodsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/onion/bookapp/DB/Impl/GoodsDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/onion/bookapp/DB/Impl/GoodsDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/onion/bookapp/DB/Impl/GoodsDAOProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/onion/bookapp/DB/Impl/GoodsDAOProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/onion/bookapp/myservler/control/HandlePublish.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/onion/bookapp/myservlet/control/HandlePublish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/target/classes/onion/bookapp/DB/DAO/GoodsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/classes/onion/bookapp/DB/DAO/GoodsDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/target/classes/onion/bookapp/DB/Impl/GoodsDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/classes/onion/bookapp/DB/Impl/GoodsDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/target/classes/onion/bookapp/DB/Impl/GoodsDAOProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/target/classes/onion/bookapp/DB/Impl/GoodsDAOProxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/target/classes/onion/bookapp/myservler/control/HandlePublish.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/bookstore_app.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/lib/javax.annotation.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/lib/javax.ejb.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/lib/javax.jms.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/lib/javax.persistence.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/lib/javax.resource.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/lib/javax.servlet.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/lib/javax.servlet.jsp.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/lib/javax.servlet.jsp.jstl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/lib/javax.transaction.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/WEB-INF/classes/onion/bookapp/DB/DAO/GoodsDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/WEB-INF/classes/onion/bookapp/DB/DBUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/WEB-INF/classes/onion/bookapp/DB/Impl/GoodsDAOImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/WEB-INF/classes/onion/bookapp/DB/Impl/GoodsDAOProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/WEB-INF/classes/onion/bookapp/mybean/data/Goods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/WEB-INF/classes/onion/bookapp/myservler/control/HandlePublish.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/WEB-INF/classes/onion/bookapp/myservler/control/HandleSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/WEB-INF/classes/onion/bookapp/utils/utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/WEB-INF/lib/commons-beanutils-1.7.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/WEB-INF/lib/commons-collections-3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/WEB-INF/lib/commons-lang-2.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/WEB-INF/lib/commons-logging-1.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/WEB-INF/lib/ezmorph-1.0.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/WEB-INF/lib/gson-2.8.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/WEB-INF/lib/json-lib-2.4-jdk15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/WEB-INF/lib/tomcat-annotations-api-9.0.35.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/out/artifacts/bookstore_app_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/src/main/java/onion/bookapp/DB/DAO/GoodsDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/src/main/java/onion/bookapp/DB/DBUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/src/main/java/onion/bookapp/DB/Impl/GoodsDAOImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/src/main/java/onion/bookapp/DB/Impl/GoodsDAOProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/src/main/java/onion/bookapp/mybean/data/Goods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/src/main/java/onion/bookapp/myservler/control/HandlePublish.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/src/main/java/onion/bookapp/myservler/control/HandleSearch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/src/main/java/onion/bookapp/utils/utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/src/test/java/daotest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/target/classes/onion/bookapp/DB/DAO/GoodsDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/target/classes/onion/bookapp/DB/DBUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/target/classes/onion/bookapp/DB/Impl/GoodsDAOImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/target/classes/onion/bookapp/DB/Impl/GoodsDAOProxy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/target/classes/onion/bookapp/mybean/data/Goods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/target/classes/onion/bookapp/myservler/control/HandlePublish.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/target/classes/onion/bookapp/myservler/control/HandleSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/target/classes/onion/bookapp/utils/utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookstore_app/target/test-classes/daotest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +106,6 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src" />
@@ -64,6 +125,7 @@
       <option name="presentableId" value="Default" />
       <updated>1605164236020</updated>
       <workItem from="1605164237541" duration="1266000" />
+      <workItem from="1605279347240" duration="2666000" />
     </task>
     <servers />
   </component>
@@ -80,6 +142,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="642" y="266" width="498" height="525" key="FileChooserDialogImpl" timestamp="1605165471143">
@@ -90,10 +153,11 @@
       <screen x="0" y="27" width="1920" height="972" />
     </state>
     <state x="746" y="140" width="418" height="752" key="RollbackChangesDialog/0.27.1920.972@0.27.1920.972" timestamp="1605165453423" />
-    <state x="384" y="99" width="1024" height="852" key="SettingsEditor" timestamp="1605165472205">
-      <screen x="0" y="27" width="1920" height="972" />
+    <state x="2073" y="237" width="738" height="1683" key="SettingsEditor" timestamp="1605286934021">
+      <screen x="1920" y="0" width="1080" height="1920" />
     </state>
     <state x="384" y="99" width="1024" height="852" key="SettingsEditor/0.27.1920.972@0.27.1920.972" timestamp="1605165472205" />
+    <state x="2073" y="237" width="738" height="1683" key="SettingsEditor/0.525.1920.972/1920.0.1080.1920@1920.0.1080.1920" timestamp="1605286934021" />
     <state x="727" y="290" width="455" height="452" key="chooseDestDirectoryDialog" timestamp="1605165309515">
       <screen x="0" y="27" width="1920" height="972" />
     </state>

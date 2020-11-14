@@ -5,11 +5,21 @@
          version="4.0">
     <servlet>
         <servlet-name>publishServlet</servlet-name>
-        <servlet-class>onion.bookapp.myservler.control.HandlePublish</servlet-class>
+        <servlet-class>onion.bookapp.myservlet.control.HandlePublish</servlet-class>
         
     </servlet>
     <servlet-mapping>
         <servlet-name>publishServlet</servlet-name>
         <url-pattern>/publishServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>registerServlet</servlet-name>
+        <servlet-class>onion.bookapp.myservlet.control.HandleRegister</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registerServlet</servlet-name>
+        <url-pattern>/registerServlet</url-pattern>
     </servlet-mapping>
 </web-app>
