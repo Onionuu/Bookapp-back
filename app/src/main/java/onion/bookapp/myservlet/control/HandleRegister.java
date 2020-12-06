@@ -32,12 +32,14 @@ public class HandleRegister extends HttpServlet {
         resp.setContentType("application/json");
         resp.setCharacterEncoding("utf-8");
         PrintWriter out=resp.getWriter();
+
         String logname=req.getParameter("logname").trim();
         String password=req.getParameter("password").trim();
         String again_password=req.getParameter("again_password").trim();
         String city=req.getParameter("city").trim();
         String major=req.getParameter("major").trim();
         String school=req.getParameter("school").trim();
+        System.out.println(logname+password+again_password+city);
         String errormessage="";
         Map<String,String> responsemap=new HashMap<String, String>();
 

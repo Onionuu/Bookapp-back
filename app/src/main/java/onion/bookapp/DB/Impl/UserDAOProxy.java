@@ -22,4 +22,14 @@ public class UserDAOProxy implements UserDAO {
         DBUtils.closeConnection();
         return false;
     }
+
+    @Override
+    public boolean login(String logname, String psw)   {
+        if (dao.login(logname,psw)){
+            DBUtils.closeConnection();
+            return true;
+        }
+        DBUtils.closeConnection();
+        return false;
+    }
 }

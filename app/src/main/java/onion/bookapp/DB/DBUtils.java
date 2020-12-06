@@ -60,7 +60,7 @@ public class DBUtils {
     public static Connection getConnection() {
         try {
             String link = BaseURL +
-                    "user=" + UserName + "&password=" + Password + "&useSSL=false&serverTimezone=GMT";
+                    "user=" + UserName + "&password=" + Password + "&useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT";
             System.out.println("link:" + link);
             connection = DriverManager.getConnection(link);
         } catch (SQLException e) {

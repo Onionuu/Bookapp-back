@@ -37,7 +37,7 @@ public class GoodsDAOImpl implements GoodsDAO {
     }
     public ResultSet search(String keyword) {
         try{
-            String sql = "select images,title,price from goods where title like ? or detail like ?";
+            String sql = "select goodsid,images,title,price from goods where title like ? or detail like ?";
             pstmt=conn.prepareStatement(sql);
             pstmt.setString(1,"%"+keyword+"%");
             pstmt.setString(2,"%"+keyword+"%");
@@ -46,5 +46,64 @@ public class GoodsDAOImpl implements GoodsDAO {
             e.printStackTrace();
         }
         return null;
+    }
+
+    @Override
+    public ResultSet screenSearch(String words, String city, String university, int num, int index, String sort) throws Exception {
+        boolean tag=false;
+        String sql="select goodsid,images,title,price,city,university from goods";
+        if(words!=""){
+            sql+=" where title like ?";
+            tag=true;
+        }
+        if (city!=""){
+            if (tag==true)
+                sql+=" and";
+            else{
+                tag=true;
+                sql+=" where";
+            }
+
+            sql+=" city=?";
+        }
+        if (university!=""){
+            if (tag==true)
+                sql+=" and";
+            else{
+                tag=true;
+                sql+=" where";
+            }
+            sql+=" university=?";
+        }
+        if (sort!=""){
+            if (tag==true)
+                sql+=" and";
+            else{
+                tag=true;
+                sql+=" where";
+            }
+            sql+=" sort=?";
+        }
+        sql+=" limit ?,?";
+        System.out.println(sql);
+        System.out.println(city);
+        try{
+            pstmt=conn.prepareStatement(sql);
+            int i=1;
+            if(words!="")pstmt.setString(i++,"%"+words+"%");
+
+            if(city!="")pstmt.setString(i++,city);
+            if (university!="")pstmt.setString(i++,university);
+            if (sort!="")pstmt.setString(i++,sort);
+            pstmt.setInt(i++,index);
+            pstmt.setInt(i++,num);
+
+            System.out.println(pstmt.toString());
+            return pstmt.executeQuery();
+        }
+        catch (Exception e){
+            throw e;
+        }
+
     }
 }

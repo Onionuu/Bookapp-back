@@ -3,17 +3,17 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <!-- 发布 -->
     <servlet>
         <servlet-name>publishServlet</servlet-name>
         <servlet-class>onion.bookapp.myservlet.control.HandlePublish</servlet-class>
-        
     </servlet>
     <servlet-mapping>
         <servlet-name>publishServlet</servlet-name>
         <url-pattern>/publishServlet</url-pattern>
     </servlet-mapping>
 
-
+    <!-- 注册 -->
     <servlet>
         <servlet-name>registerServlet</servlet-name>
         <servlet-class>onion.bookapp.myservlet.control.HandleRegister</servlet-class>
@@ -21,5 +21,25 @@
     <servlet-mapping>
         <servlet-name>registerServlet</servlet-name>
         <url-pattern>/registerServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- 登录 -->
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>onion.bookapp.myservlet.control.HandleLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+
+<!--    筛选搜索-->
+    <servlet>
+        <servlet-name>screenSearchServlet</servlet-name>
+        <servlet-class>onion.bookapp.myservlet.control.HandleScreenSearch</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>screenSearchServlet</servlet-name>
+        <url-pattern>/screenSearchServlet</url-pattern>
     </servlet-mapping>
 </web-app>

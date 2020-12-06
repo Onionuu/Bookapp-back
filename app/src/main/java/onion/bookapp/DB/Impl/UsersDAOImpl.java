@@ -39,4 +39,22 @@ public class UsersDAOImpl implements UserDAO {
         }
         return flag;
     }
+
+    @Override
+    public boolean login(String logname, String psw)   {
+        String sql="select * from user where userid='"+logname+"'and psw='"+psw+"'";
+        try{
+            this.pstmt=this.conn.prepareStatement(sql);
+
+            ResultSet rs=this.pstmt.executeQuery();
+
+            boolean m=rs.next();
+            System.out.println(rs.getString(1));
+            this.pstmt.close();
+            return m;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
 }

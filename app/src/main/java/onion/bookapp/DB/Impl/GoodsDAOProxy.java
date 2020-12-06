@@ -28,4 +28,13 @@ public class GoodsDAOProxy implements GoodsDAO {
     public ResultSet search(String keyword) {
         return dao.search(keyword);
     }
+
+    @Override
+    public ResultSet screenSearch(String words, String city, String university, int num, int index, String sort) throws Exception {
+        try{
+            return dao.screenSearch(words, city, university, num, index, sort);
+        }catch (Exception e){
+            throw e;
+        }
+    }
 }
