@@ -1,10 +1,14 @@
 package onion.bookapp.websocket;
 
+import com.alibaba.fastjson.JSON;
+import onion.bookapp.DB.Impl.MessageDaoImpl;
+import onion.bookapp.mybean.data.Message;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;
 
 import java.net.InetSocketAddress;
+import java.util.List;
 
 public class WsServer extends WebSocketServer {
 
@@ -16,6 +20,7 @@ public class WsServer extends WebSocketServer {
     public void onOpen(WebSocket webSocket, ClientHandshake clientHandshake) {
         //ws连接的时候触发的代码，onOpen中我们不做任何操作
         System.out.println("onopen"+"");
+
     }
 
     @Override
@@ -32,9 +37,14 @@ public class WsServer extends WebSocketServer {
         //conn.send("消息内容");
         if (null != message&&message.startsWith("online")){
             userJoin(conn,message);//用户加入
+            MessageDaoImpl dao = new MessageDaoImpl();
+            List<Message> list = dao.notReadMsgALL(message.substring(6));
+            String msgList = JSON.toJSONString(list);
+            conn.send(msgList);
         }else if(null!=message&&message.startsWith("offline")){
             userLeave(conn);
         }
+
     }
 
     @Override

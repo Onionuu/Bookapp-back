@@ -157,7 +157,36 @@ public class MessageDaoImpl {
         return count;
     }
 
+    //获取未读消息
+    public List<Message> notReadMsgALL(String name){
+        List<Message>msgList = new ArrayList<Message>();
+        String sql = "select * from ws_message where toName = ? and msgStatus = 0";
 
+        Connection conn = DBUtils.getConnection();
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try{
+            ps=conn.prepareStatement(sql);
+            ps.setString(1,name);
+
+            rs=ps.executeQuery();
+            while (rs.next()){
+                Message m = new Message();
+                m.setMsgId(rs.getInt("msgId"));
+                m.setFromName(rs.getString("fromName"));
+                m.setToName(rs.getString("toName"));
+                m.setMsgContent(rs.getString("msgContent"));
+                m.setMsgStatus(rs.getInt("msgStatus"));
+                m.setMsgDate(rs.getTimestamp("msgDate"));
+                msgList.add(m);
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }finally {
+            DBUtils.closeConnection();
+        }
+        return msgList;
+    }
 
 
 
