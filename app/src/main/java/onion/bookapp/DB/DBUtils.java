@@ -35,7 +35,7 @@ public class DBUtils {
 //            Password=properties.getProperty("password");
             BaseURL="jdbc:mysql://localhost/app?";
             UserName="root";
-            Password="wuwu1212";
+            Password="123456";
             try {
                 Class.forName("com.mysql.jdbc.Driver").newInstance();
             } catch (InstantiationException e) {
