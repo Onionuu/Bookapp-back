@@ -39,8 +39,11 @@ public class WsServer extends WebSocketServer {
             userJoin(conn,message);//用户加入
             MessageDaoImpl dao = new MessageDaoImpl();
             List<Message> list = dao.notReadMsgALL(message.substring(6));
-            String msgList = JSON.toJSONString(list);
-            conn.send(msgList);
+            dao.UpdateToNotRead(message.substring(6));
+            for(int i=0;i<list.size();i++){
+                Message msg = list.get(i);
+                conn.send( JSON.toJSONString(msg));
+            }
         }else if(null!=message&&message.startsWith("offline")){
             userLeave(conn);
         }

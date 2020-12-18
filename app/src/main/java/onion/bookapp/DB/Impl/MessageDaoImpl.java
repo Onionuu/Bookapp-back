@@ -21,6 +21,7 @@ public class MessageDaoImpl {
     public int sendMsg(Message msg){
         int count =-1;
         long id =System.currentTimeMillis();
+        msg.setMsgId(id);
         Date sysdate = new Date(System.currentTimeMillis());
         SimpleDateFormat format =new SimpleDateFormat("yyyy-MM-dd");
         System.out.println(format.format(sysdate));
@@ -65,7 +66,7 @@ public class MessageDaoImpl {
             rs=ps.executeQuery();
             while (rs.next()){
                 Message m = new Message();
-                m.setMsgId((int)rs.getLong("msgId"));
+                m.setMsgId(rs.getLong("msgId"));
                 m.setFromName(rs.getString("fromName"));
                 m.setToName(rs.getString("toName"));
                 m.setMsgContent(rs.getString("msgContent"));
@@ -100,7 +101,7 @@ public class MessageDaoImpl {
             rs=ps.executeQuery();
             while (rs.next()){
                 Message m = new Message();
-                m.setMsgId(rs.getInt("msgId"));
+                m.setMsgId(rs.getLong("msgId"));
                 m.setFromName(rs.getString("fromName"));
                 m.setToName(rs.getString("toName"));
                 m.setMsgContent(rs.getString("msgContent"));
@@ -160,7 +161,7 @@ public class MessageDaoImpl {
     //获取未读消息
     public List<Message> notReadMsgALL(String name){
         List<Message>msgList = new ArrayList<Message>();
-        String sql = "select * from ws_message where toName = ? and msgStatus = 0";
+        String sql = "select * from ws_message where toName = ? and msgStatus = 2";
 
         Connection conn = DBUtils.getConnection();
         PreparedStatement ps = null;
@@ -172,7 +173,7 @@ public class MessageDaoImpl {
             rs=ps.executeQuery();
             while (rs.next()){
                 Message m = new Message();
-                m.setMsgId(rs.getInt("msgId"));
+                m.setMsgId(rs.getLong("msgId"));
                 m.setFromName(rs.getString("fromName"));
                 m.setToName(rs.getString("toName"));
                 m.setMsgContent(rs.getString("msgContent"));
@@ -188,7 +189,40 @@ public class MessageDaoImpl {
         return msgList;
     }
 
+    //发送给未登录用户信息
+    public int ToNotLogin(Message msg){
+        int count = -1;
+        StringBuffer sql = new StringBuffer("update ws_message set msgstatus = 2");
+        sql.append("where msgid = ?");
+        Connection conn = DBUtils.getConnection();
+        PreparedStatement ps = null;
+        try {
+            ps=conn.prepareStatement(sql.toString());
+            ps.setLong(1,msg.getMsgId());
+            count = ps.executeUpdate();
+            ps.close();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return count;
+    }
 
-
+    //将离线消息设置为未读
+    public int UpdateToNotRead(String name){
+        int count = -1;
+        StringBuffer sql = new StringBuffer("update ws_message set msgstatus = 0");
+        sql.append("where  toName= ?");
+        Connection conn = DBUtils.getConnection();
+        PreparedStatement ps = null;
+        try {
+            ps=conn.prepareStatement(sql.toString());
+            ps.setString(1,name);
+            count = ps.executeUpdate();
+            ps.close();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return count;
+    }
 
 }

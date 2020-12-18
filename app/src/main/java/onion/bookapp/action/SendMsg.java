@@ -44,9 +44,13 @@ public class SendMsg extends HttpServlet {
             // 根据用户名找到 用户和服务器连接到的websocket对象
             WebSocket wsConn = WsPool.getWsByUser("online" + toName);
             // 发送单条消息
+
             msg.setMsgDate(new Timestamp(System.currentTimeMillis()));
             // System.out.println(wsConn + "\t" + JSON.toJSONString(msg));
-            WsPool.sendMessageToUser(wsConn, JSON.toJSONString(msg));
+            if (wsConn!=null)
+                WsPool.sendMessageToUser(wsConn, JSON.toJSONString(msg));
+            else
+                dao.ToNotLogin(msg);
         }
 
         // 新增成功 发送时间

@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import java.sql.Timestamp;
 
 public class Message {
-    private Integer msgId;
+    private Long msgId;
     private String msgContent;
     private String fromName;
     private String toName;
@@ -14,7 +14,7 @@ public class Message {
 
     public Message(){}
 
-    public Message(Integer msgId, String msgContent, String fromName, String toName, Timestamp msgDate, Integer msgStatus) {
+    public Message(Long msgId, String msgContent, String fromName, String toName, Timestamp msgDate, Integer msgStatus) {
         super();
         this.msgId = msgId;
         this.msgContent = msgContent;
@@ -24,11 +24,11 @@ public class Message {
         this.msgStatus = msgStatus;
     }
 
-    public Integer getMsgId() {
+    public Long getMsgId() {
         return msgId;
     }
 
-    public void setMsgId(Integer msgId) {
+    public void setMsgId(Long msgId) {
         this.msgId = msgId;
     }
 
